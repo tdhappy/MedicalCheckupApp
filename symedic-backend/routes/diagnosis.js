@@ -3,18 +3,21 @@ let express = require('express');
 let router = express.Router();
 const request = require('request');
 const constantFile = require('./constant');
-const fixedUrl = constantFile.apimedicUrl + 'symptoms';
-const queryString = '?token=' + constantFile.token + '&' + constantFile.languageConst;
+var birthByAgeAtDate = require('birth-by-age-at-date');
+const fixedUrl = constantFile.apimedicUrl + 'diagnosis';
+const queryString = '&token=' + constantFile.token + '&' + constantFile.languageConst;
 
-//  Get Symptoms based on sub body locations
-router.post('/symptoms', function (req, res, next) {
+//  Get diagnosis based on sub body locations
+router.post('/diagnosis', function (req, res, next) {
     if (!!req.body) {
-        let uri = symptomsUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + queryString;
+        let birthYear = birthByAgeAtDate(req.body.age, new Date()).lowerYear;
+        let uri = fixedUrl + '?symptoms=[' + req.body.symptoms + ']&gender='
+            + req.body.gender + '&year_of_birth=' + birthYear + queryString;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 let resObj = new resFormat(response.body)
                     .customMeta({
-                        message: 'Symptoms retrieved Successfully.'
+                        message: 'Diagnosis retrieved Successfully.'
                     });
                 return res.status(resObj.getStatus()).json(resObj.log());
             } else {
