@@ -16,7 +16,7 @@ router.post('/diagnosis', function (req, res, next) {
             + req.body.gender + '&year_of_birth=' + birthYear + queryString;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                let resObj = new resFormat(response.body)
+                let resObj = new resFormat(JSON.parse(response.body))
                     .customMeta({
                         message: 'Diagnosis retrieved Successfully.'
                     });

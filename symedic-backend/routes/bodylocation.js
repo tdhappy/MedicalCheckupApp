@@ -11,7 +11,7 @@ let resFormat = require("../helpers/res_format");
 router.get('/body/locations', function (req, res, next) {
     request(fixedUrl + queryString, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            let resObj = new resFormat(response.body)
+            let resObj = new resFormat(JSON.parse(response.body))
                 .customMeta({
                     message: 'Main Body Parts retrieved Successfully.'
                 });
@@ -28,7 +28,7 @@ router.get('/body/locations/:mainBodyLocationId', function (req, res, next) {
     let uri = fixedUrl + '/' + req.params.mainBodyLocationId + queryString;
     request(uri, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            let resObj = new resFormat(response.body)
+            let resObj = new resFormat(JSON.parse(response.body))
                 .customMeta({
                     message: 'Sub Body Parts retrieved Successfully.'
                 });

@@ -10,10 +10,10 @@ let resFormat = require("../helpers/res_format");
 //  Get Symptoms based on sub body locations
 router.post('/symptoms', function (req, res, next) {
     if (!!req.body) {
-        let uri = symptomsUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + queryString;
+        let uri = fixedUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + queryString;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                let resObj = new resFormat(response.body)
+                let resObj = new resFormat(JSON.parse(response.body))
                     .customMeta({
                         message: 'Symptoms retrieved Successfully.'
                     });

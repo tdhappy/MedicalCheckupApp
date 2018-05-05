@@ -27,6 +27,7 @@ app.set('port', process.env.PORT || 3001);
 app.use(require('./routes/symptoms'));
 app.use(require('./routes/bodylocation'));
 app.use(require('./routes/diagnosis'));
+app.use(require('./routes/doctors'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
