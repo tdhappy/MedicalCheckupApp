@@ -8,8 +8,10 @@ const queryString = '?token=' + constantFile.token + '&' + constantFile.language
 let resFormat = require("../helpers/res_format");
 
 //  Get Symptoms based on sub body locations
-router.post('/symptoms', function (req, res, next) {
+router.post('/doctors', function (req, res, next) {
     if (!!req.body) {
+        let specialization = req.body.specialization;
+        let specializationArray = specialization.split(",");
         let uri = symptomsUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + queryString;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {

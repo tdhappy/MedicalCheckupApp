@@ -5,6 +5,7 @@ const request = require('request');
 const constantFile = require('./constant');
 const fixedUrl = constantFile.apimedicUrl + 'body/locations';
 const queryString = '?token=' + constantFile.token + '&' + constantFile.languageConst;
+let resFormat = require("../helpers/res_format");
 
 //Symmedic-comment : Get Main Body Parts
 router.get('/body/locations', function (req, res, next) {

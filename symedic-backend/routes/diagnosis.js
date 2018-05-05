@@ -6,6 +6,7 @@ const constantFile = require('./constant');
 var birthByAgeAtDate = require('birth-by-age-at-date');
 const fixedUrl = constantFile.apimedicUrl + 'diagnosis';
 const queryString = '&token=' + constantFile.token + '&' + constantFile.languageConst;
+let resFormat = require("../helpers/res_format");
 
 //  Get diagnosis based on sub body locations
 router.post('/diagnosis', function (req, res, next) {
