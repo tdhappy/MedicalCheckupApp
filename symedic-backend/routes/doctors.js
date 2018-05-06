@@ -10,6 +10,7 @@ let doctorSpecializationUrl = 'https://api.betterdoctor.com/2016-03-01/specialti
 let findDoctorsUrl = 'https://api.betterdoctor.com/2016-03-01/doctors';
 let userKey = '2ed4c0595ab2ef6f95892b0bb442bfea';
 const _ = require('lodash');
+var zipcodes = require('zipcodes');
 
 //  Get Symptoms based on sub body locations
 router.post('/doctors', function (req, res, next) {
@@ -32,8 +33,13 @@ router.post('/doctors', function (req, res, next) {
                     }
                     console.log("filteredSpecialization :", filteredSpecialization);
                     if (filteredSpecialization.length > 0) {
-                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: req.body.location, user_location: req.body.user_location, user_key: userKey };
+                        let zipVals = zipcodes.lookup(req.body.zipcode);
+                        let location = zipVals.latitude + "," + zipVals.longitude;
+                        console.log("location ::::",location);
+                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: userKey };
                         request({ url: findDoctorsUrl, qs: propertiesObject }, function (error, response, body) {
+                            console.log("error :",error);
+                            console.log("response.statusCode ::::",response.statusCode);
                             if (!error && response.statusCode == 200) {
                                 let resObj = new resFormat(JSON.parse(response.body).data)
                                     .customMeta({
