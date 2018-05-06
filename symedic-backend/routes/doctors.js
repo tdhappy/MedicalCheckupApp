@@ -9,7 +9,7 @@ let userKey = '2ed4c0595ab2ef6f95892b0bb442bfea';
 const _ = require('lodash');
 var zipcodes = require('zipcodes');
 
-//  Get Symptoms based on sub body locations
+//  Get doctors based on specialization and zipcodes
 router.post('/doctors', function (req, res, next) {
     if (!!req.body) {
         let specialization = req.body.specialization;
