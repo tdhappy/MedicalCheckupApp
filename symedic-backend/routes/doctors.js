@@ -2,9 +2,6 @@
 let express = require('express');
 let router = express.Router();
 const request = require('request');
-const constantFile = require('./constant');
-const fixedUrl = constantFile.apimedicUrl + 'symptoms';
-const queryString = '?token=' + constantFile.token + '&' + constantFile.languageConst;
 let resFormat = require("../helpers/res_format");
 let doctorSpecializationUrl = 'https://api.betterdoctor.com/2016-03-01/specialties?fields=uid%2Cname&user_key=2ed4c0595ab2ef6f95892b0bb442bfea';
 let findDoctorsUrl = 'https://api.betterdoctor.com/2016-03-01/doctors';
