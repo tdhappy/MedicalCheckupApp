@@ -1,0 +1,33 @@
+<!--
+  Generated template for the AgePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header-color">
+    <ion-title>Age</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item class="age-range">
+    <ion-range min="0" max="120" color="icon-color" tip="true" pin="true" [(ngModel)]="age" (ionBlur)="setDone();getInput(age)">
+      <ion-icon range-left small name="add-circle"></ion-icon>
+      <ion-icon range-right small name="remove-circle"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <div *ngIf="!done;then selectage else ageselected"></div>
+  <ng-template #selectage><div class="card-description" style="text-align:center">Slide to set your age</div></ng-template>
+  <ng-template #ageselected><div class="card-description" style="text-align:center">Your age is {{age}}</div></ng-template>
+
+  <ion-fab right bottom *ngIf="done">
+    <button ion-fab (click)="goToBodypartPage()" color="icon-color">
+      <ion-icon name = "arrow-forward"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

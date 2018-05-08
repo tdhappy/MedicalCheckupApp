@@ -1,0 +1,55 @@
+<!--
+  Generated template for the OptionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header-color">
+    <div [ngSwitch]="pageselected">
+      <div *ngSwitchCase="'checkup'">
+        <ion-title>Check Symptoms</ion-title>
+      </div>
+
+      <div *ngSwitchCase="'doctor'">
+        <ion-title>Find a Doctor</ion-title>
+      </div>
+
+      <div *ngSwitchCase="'faq'">
+        <ion-title>FAQ</ion-title>
+      </div>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-slides pager shouldLockSwipes="true" (ionSlideDidChange)="changePageTitle()">
+  <ion-slide>
+    <ion-card class="card-style">
+      <img src="assets/imgs/Checkup.jpeg"/>
+    </ion-card>
+    <div class="card-title">Start Checkup</div>
+    <div class="card-description">Check your symptoms & find out what could be causing them.</div>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-style">
+      <img src="assets/imgs/doctor.jpg"/>
+    </ion-card>
+    <div class="card-title">Find a Doctor</div>
+    <div class="card-description">Find a doctor by specialty and location.</div>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card class="card-style">
+      <img src="assets/imgs/faq.jpg"/>
+    </ion-card>
+    <div class="card-title">FAQs</div>
+    <div class="card-description">Reach out for help by reading our FAQs.</div>
+  </ion-slide>
+</ion-slides>
+
+</ion-content>
