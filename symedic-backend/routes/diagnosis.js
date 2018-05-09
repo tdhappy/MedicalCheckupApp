@@ -8,13 +8,6 @@ const fixedUrl = constantFile.apimedicUrl + 'diagnosis';
 const queryString = '&token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
 let resFormat = require("../helpers/res_format");
 
-router.get('/doctor-token/:token', function (req, res) {
-    console.log();
-    process.env.doctorToken = req.params.token;
-    res.locals.doctorToken = req.params.token;
-    return res.status(200).json({"success": process.env.doctorToken});
-});
-
 //  Get diagnosis based on sub body locations
 router.post('/diagnosis', function (req, res, next) {
     if (!!req.body) {
