@@ -26,7 +26,7 @@ export class ResultsPage {
   ionViewDidLoad() {
 
     this.resultprovider.getResults().toPromise().then(data => {
-      this.results = JSON.parse(data["data"]);
+      this.results = data["data"];
     });
   }
 

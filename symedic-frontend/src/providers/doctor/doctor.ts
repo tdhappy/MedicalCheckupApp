@@ -17,7 +17,7 @@ export class DoctorProvider {
 
   public getDoctors()
   {
-    let apiurl = "https://modern-penguin-53.localtunnel.me/doctors";
+    let apiurl = "http://localhost:3001/doctors";
 
     return this.http.post(apiurl,
       {

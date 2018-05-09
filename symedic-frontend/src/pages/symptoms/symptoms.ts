@@ -26,7 +26,7 @@ export class SymptomsPage {
     this.symptomsprovider.getSymptoms()
       .toPromise()
       .then(data => {
-        this.symptoms = JSON.parse(data["data"]);
+        this.symptoms = data["data"];
       });
     this.input.reset();
   }

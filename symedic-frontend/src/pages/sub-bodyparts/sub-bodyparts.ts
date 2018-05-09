@@ -25,7 +25,7 @@ public subbody=[];
   ionViewDidLoad() {
   this.subbodyprovider.getSubBodyParts()
     .subscribe(data => {
-      this.subbody = JSON.parse(data["data"]);
+      this.subbody = data["data"];
     });
   }
 
