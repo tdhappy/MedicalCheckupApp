@@ -19,6 +19,12 @@ export class SubbodypartsProvider {
 
   getSubBodyParts(){
     let apiurl = appSettings.url + "/body/locations/" + this.input.getBodyPart();
-    return this.http.get(apiurl);
+    return this.http.get(apiurl, {
+      headers:
+        {
+          'Access-Control-Allow-Origin' : '*',
+          'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT'
+        }
+    });
   }
 }
