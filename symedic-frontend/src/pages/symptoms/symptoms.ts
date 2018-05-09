@@ -20,8 +20,10 @@ export class SymptomsPage {
   public done = false;
   public symptoms =[];
   public state = [];
+  public loading = true;
   constructor(private input:CheckupInputProvider,private symptomsprovider:SymptomsProvider,public navCtrl: NavController, public navParams: NavParams) {
     this.input.symptoms = [];
+    this.loading = true;
   }
 
   ionViewDidLoad() {
@@ -30,6 +32,7 @@ export class SymptomsPage {
       .then(data => {
         this.symptoms = data["data"];
         this.state.length = this.symptoms.length;
+        this.loading = false;
       });
 
   }

@@ -13,7 +13,9 @@
 </ion-header>
 
 
+
 <ion-content padding>
+  <ion-spinner class = "spinner-center"*ngIf="loading" name="bubbles"></ion-spinner>
   <ion-list>
     <ion-item *ngFor="let j of symptoms; let index = index">
       <ion-label class = "sym">{{j.Name}}</ion-label>

@@ -19,13 +19,16 @@ import {SymptomsPage} from "../symptoms/symptoms";
 export class SubBodypartsPage {
 
 public subbody=[];
+  public loading = true;
   constructor(private input:CheckupInputProvider,private subbodyprovider:SubbodypartsProvider,public navCtrl: NavController, public navParams: NavParams) {
+   this.loading = true;
   }
 
   ionViewDidLoad() {
   this.subbodyprovider.getSubBodyParts()
     .subscribe(data => {
       this.subbody = data["data"];
+      this.loading = false;
     });
   }
 

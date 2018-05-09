@@ -19,14 +19,17 @@ export class ResultsPage {
 
   public results = [];
   public loadProgress:number = 0;
+  public loading = true;
 
   constructor(private checkupinput:CheckupInputProvider,private resultprovider: ResultProvider,public navCtrl: NavController, public navParams: NavParams) {
+   this.loading = true;
   }
 
   ionViewDidLoad() {
 
     this.resultprovider.getResults().toPromise().then(data => {
       this.results = data["data"];
+      this.loading = false;
     });
   }
 

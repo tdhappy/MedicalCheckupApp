@@ -17,7 +17,6 @@ import {SubbodypartsProvider} from "../../providers/subbodyparts/subbodyparts";
   templateUrl: 'bodypart.html',
 })
 export class BodypartPage {
-
   constructor(private subbodypart:SubbodypartsProvider,private checkupinput:CheckupInputProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 

@@ -26,7 +26,10 @@ export class DoctorPage {
   public doctors = [];
   public zipcode;
   public specialization;
+  public loading = true;
+
   constructor(private geolocation:Geolocation,private input:CheckupInputProvider, private doctorprovider:DoctorProvider,public navCtrl: NavController, public navParams: NavParams) {
+    this.loading = true;
   }
 
   ionViewDidLoad() {
@@ -40,7 +43,7 @@ export class DoctorPage {
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
 
       var infowindow = new google.maps.InfoWindow();
-
+      this.loading = false;
     });
   }
 
@@ -84,6 +87,7 @@ export class DoctorPage {
   }
 
   search(){
+    this.loading = true;
     this.doctorprovider.getDoctors().toPromise().then(data => {
      this.doctors = data["data"];
       let finaldoctors = [];
@@ -93,8 +97,8 @@ export class DoctorPage {
        temp.push(this.doctors[i]["practices"][0]["lat"]);
        temp.push(this.doctors[i]["practices"][0]["lon"]);
        finaldoctors.push(temp);
-
      }
+      this.loading = false;
       this.loadMap(finaldoctors);
     })
   }
