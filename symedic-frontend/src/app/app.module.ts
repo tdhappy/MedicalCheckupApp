@@ -24,6 +24,7 @@ import {DoctorPage} from "../pages/doctor/doctor";
 import  {FaqPage} from "../pages/faq/faq";
 import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
 import {Geolocation} from "@ionic-native/geolocation";
+import {AccordionListComponent} from "../components/accordion-list/accordion-list";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {Geolocation} from "@ionic-native/geolocation";
     ResultsPage,
     DoctorPage,
     FaqPage,
-    ProgressBarComponent
+    ProgressBarComponent,
+    AccordionListComponent
   ],
   imports: [
     BrowserModule,
