@@ -1,3 +1,25 @@
 page-doctor {
+ .row{
+   margin-top: -22px;
+ }
 
+  .button{
+    margin-left: 10px;
+    width: 288px;
+    height: 35px;
+    font-family: Roboto;
+
+  }
+
+}
+
+input.text-input.text-input-ios{
+    font-family: Roboto;
+    font-size: small;
+    font-weight: normal;
+}
+
+#map {
+  margin-top: 10px;
+  height: 355px;
 }

@@ -23,6 +23,7 @@ import {ResultsPage} from "../pages/results/results";
 import {DoctorPage} from "../pages/doctor/doctor";
 import  {FaqPage} from "../pages/faq/faq";
 import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
+import {Geolocation} from "@ionic-native/geolocation";
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
     SubbodypartsProvider,
     SymptomsProvider,
     ResultProvider,
-    DoctorProvider
+    DoctorProvider,
+    Geolocation
   ]
 })
 export class AppModule {}

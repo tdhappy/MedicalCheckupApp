@@ -5,7 +5,7 @@ const request = require('request');
 let resFormat = require("../helpers/res_format");
 let doctorSpecializationUrl = 'https://api.betterdoctor.com/2016-03-01/specialties?fields=uid%2Cname&user_key=2ed4c0595ab2ef6f95892b0bb442bfea';
 let findDoctorsUrl = 'https://api.betterdoctor.com/2016-03-01/doctors';
-let userKey = '2ed4c0595ab2ef6f95892b0bb442bfea';
+let userKey = 'debf9e352077860867ec89335f9de7d8';
 const _ = require('lodash');
 var zipcodes = require('zipcodes');
 

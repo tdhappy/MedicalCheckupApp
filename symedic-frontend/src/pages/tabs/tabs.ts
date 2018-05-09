@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {HomePage} from "../home/home";
 import {GenderPage} from "../gender/gender";
+import {DoctorPage} from "../doctor/doctor";
+import {FaqPage} from "../faq/faq";
 
 /**
  * Generated class for the TabsPage page.
@@ -18,6 +20,8 @@ import {GenderPage} from "../gender/gender";
 export class TabsPage {
  public homePage = HomePage;
  public checkupPage = GenderPage;
+ public doctorPage = DoctorPage;
+ public faqPage = FaqPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

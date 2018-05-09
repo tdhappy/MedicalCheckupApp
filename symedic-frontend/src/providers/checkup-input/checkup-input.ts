@@ -14,6 +14,8 @@ export class CheckupInputProvider {
   public bodypart: any;
   public subbodypart: any;
   public symptoms: any = [] ;
+  public zipcode: any;
+  public specialization: any;
 
   constructor(public http: HttpClient) {
     console.log('Hello CheckupInputProvider Provider');
@@ -57,6 +59,22 @@ export class CheckupInputProvider {
 
   addSymptoms(i: number){
     this.symptoms.push(i);
+  }
+
+  getZipcode(){
+    return this.zipcode;
+  }
+
+  addZipCode(z){
+    this.zipcode = z;
+  }
+
+  getSpecialization(){
+    return this.specialization;
+  }
+
+  addSpecialization(s){
+    this.specialization = s;
   }
 
   reset(){

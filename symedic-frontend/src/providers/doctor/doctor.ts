@@ -17,21 +17,12 @@ export class DoctorProvider {
 
   public getDoctors()
   {
-    let apiurl = "http://localhost:3001/doctors";
-
-    let gender = this.input.getGender();
-    if(gender == "woman"){
-      gender = "female";
-    }
-    else {
-      gender = "male";
-    }
+    let apiurl = "https://modern-penguin-53.localtunnel.me/doctors";
 
     return this.http.post(apiurl,
       {
-        "gender": gender,
-        "age":this.input.getAge(),
-        "symptoms": this.input.getSymptoms()
+        "specialization": this.input.getSpecialization(),
+        "zipcode": this.input.getZipcode()
       },
       {
         headers:
