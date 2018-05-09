@@ -9,7 +9,8 @@ var methodOverride = require('method-override');
 var cors = require('cors');
 var index = require('./routes/index');
 var app = express()
-
+var cors = require('cors');
+app.use(cors({credentials: true, origin: true}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
