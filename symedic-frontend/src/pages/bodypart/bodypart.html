@@ -1,0 +1,48 @@
+<!--
+  Generated template for the BodypartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="header-color">
+    <ion-title>Body Parts</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid style="margin-top: -65px">
+  <ion-row>
+    <ion-col col-md-3>
+      <img src="assets/imgs/head.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(6)"/>
+      <div class="body-title">Head, Neck or Throat</div>
+    </ion-col>
+    <ion-col col-md-3>
+      <img src="assets/imgs/back.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(15)"/>
+      <div class="body-title">Chest or Back</div>
+    </ion-col>
+    <ion-col col-md-3>
+      <img src="assets/imgs/abdomen.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(16)"/>
+      <div class="body-title">Abdomen, pelvis or buttocks</div>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 15px;">
+    <ion-col col-md-3>
+      <img src="assets/imgs/arm.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(7)"/>
+      <div class="body-title">Arms or Shoulder</div>
+    </ion-col>
+    <ion-col col-md-3>
+      <img src="assets/imgs/leg.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(10)"/>
+      <div class="body-title">Legs</div>
+    </ion-col>
+    <ion-col col-md-3>
+      <img src="assets/imgs/body.png" style="cursor: pointer" (click)="goToSubBodyPart();getInput(17)"/>
+      <div class="body-title">Skin, Joints or General</div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <div class="card-description">Tap the image to select the body part</div>
+</ion-content>

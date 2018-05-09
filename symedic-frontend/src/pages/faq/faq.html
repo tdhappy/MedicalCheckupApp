@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="header-color">
+    <ion-title>FAQ</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <accordion-list *ngFor="let item of items; let index = index"
+                  [title]="item.name"
+                  textColor="#000000"
+                  hasMargin="false"
+                  headerColor="#EAFEFE"
+                  [expanded]="index === 0">
+    <p text-wrap class="card-description">{{item.description}}</p>
+  </accordion-list>
+</ion-content>

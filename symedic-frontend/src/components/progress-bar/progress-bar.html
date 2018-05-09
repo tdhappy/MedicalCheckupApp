@@ -1,0 +1,5 @@
+<div class="progress-outer">
+  <div [ngClass]= "{'yellow-progress-inner': (progress <=79), 'red-progress-inner': (progress >=80)}" [style.width]="progress + '%'">
+    {{progress}}%
+  </div>
+</div>

@@ -5,7 +5,7 @@ const request = require('request');
 let resFormat = require("../helpers/res_format");
 let doctorSpecializationUrl = 'https://api.betterdoctor.com/2016-03-01/specialties?fields=uid%2Cname&user_key=2ed4c0595ab2ef6f95892b0bb442bfea';
 let findDoctorsUrl = 'https://api.betterdoctor.com/2016-03-01/doctors';
-let userKey = '2ed4c0595ab2ef6f95892b0bb442bfea';
+let userKey = 'debf9e352077860867ec89335f9de7d8';
 const _ = require('lodash');
 var zipcodes = require('zipcodes');
 
@@ -33,7 +33,7 @@ router.post('/doctors', function (req, res, next) {
                         let zipVals = zipcodes.lookup(req.body.zipcode);
                         let location = zipVals.latitude + "," + zipVals.longitude;
                         console.log("location ::::",location);
-                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: userKey };
+                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: process.env.doctorToken };
                         request({ url: findDoctorsUrl, qs: propertiesObject }, function (error, response, body) {
                             console.log("error :",error);
                             console.log("response.statusCode ::::",response.statusCode);

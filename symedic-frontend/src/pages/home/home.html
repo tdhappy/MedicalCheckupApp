@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="header-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>SymMedic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="home-card">
+    <img src="assets/imgs/logo.png"/>
+  </ion-card>
+  <div class="apptitle">Sym<span style="color: #00BCD4"><b>Medic</b></span></div>
+  <ion-fab right bottom>
+    <button ion-fab (click)="goToOptionsPage()" color="icon-color">
+      <ion-icon name = "arrow-forward"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
+

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="header-color">
+    <ion-title>Sub Body Parts</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-spinner class = "spinner-center" *ngIf="loading" name="bubbles"></ion-spinner>
+  <ion-list inset>
+    <button ion-item class= "subbodytitle" *ngFor="let i of subbody" (click)="getInput(i.ID);goToSymptomsPage()">
+      {{ i.Name }}
+    </button>
+  </ion-list>
+</ion-content>

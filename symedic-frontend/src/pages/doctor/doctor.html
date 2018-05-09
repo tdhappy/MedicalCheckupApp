@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="header-color">
+    <ion-title>Doctors</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-spinner class = "spinner-center"*ngIf="loading" name="bubbles"></ion-spinner>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-input type="number" placeholder="zipCode" [(ngModel)]="zipcode"></ion-input>
+      </ion-item>
+    </ion-col>
+  <ion-col>
+    <ion-item>
+      <ion-input type="text" placeholder="Specialization" [(ngModel)]="specialization"></ion-input>
+    </ion-item>
+  </ion-col>
+  </ion-row>
+  <button class="button" color="icon-color" (click)="setSpecialization();setzipCode();search()" ion-button>
+    <ion-title>Search</ion-title>
+  </button>
+  <div #map id="map" [ngClass]="{'hide': loading}"></div>
+</ion-content>

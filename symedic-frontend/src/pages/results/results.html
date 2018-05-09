@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="header-color">
+    <ion-title>Results</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-spinner class = "spinner-center"*ngIf="loading" name="bubbles"></ion-spinner>
+    <div class="main-title">Possible Conditions</div>
+      <ion-card *ngFor="let i of results; let index=index" style="background-color: #EAFEFE">
+        <div *ngIf="index <=2">
+          <ion-card-title class="title">{{i.Issue.Name}}</ion-card-title>
+          <div class="title" style="font-size: small;font-weight: lighter;">{{i.Specialisation[0].Name}}</div>
+          <progress-bar [accuracy]="i.Issue.Accuracy.toFixed(0)"></progress-bar>
+        </div>
+      </ion-card>
+  <div class="card-description" style="align-items: end"> Please note that the list below may not be complete and is provided solely for informational purposes and is not a qualified medical opinion.</div>
+</ion-content>
