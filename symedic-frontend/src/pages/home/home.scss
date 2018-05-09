@@ -20,3 +20,26 @@
   font-weight: lighter;
 }
 
+.fab-ios-icon-color {
+  background-color: #dfde34;
+  box-shadow: 1px 3px 2px #f3f3f3;
+  border: 1px solid #c7c729;
+}
+ion-title.title.title-ios {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  box-sizing: border-box;
+}
+.range-ios {
+  font-size: 20px;
+}
+
+
+element.style {
+}
+button.button.disable-hover.button-ios.button-default.button-default-ios.button-ios-icon-color:hover, button.button.disable-hover.button-ios.button-default.button-default-ios.button-ios-icon-color:focus {
+  background-color: #ffc753;
+  color: white;
+}
