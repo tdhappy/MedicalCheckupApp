@@ -33,7 +33,7 @@ router.post('/doctors', function (req, res, next) {
                         let zipVals = zipcodes.lookup(req.body.zipcode);
                         let location = zipVals.latitude + "," + zipVals.longitude;
                         console.log("location ::::",location);
-                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: userKey };
+                        var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: process.env.doctorToken };
                         request({ url: findDoctorsUrl, qs: propertiesObject }, function (error, response, body) {
                             console.log("error :",error);
                             console.log("response.statusCode ::::",response.statusCode);

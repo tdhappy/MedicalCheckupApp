@@ -51,7 +51,7 @@ router.get('/apimedic-token/:token', function (req, res) {
 
 //Symmedic-comment : Get Sub Body Parts
 router.get('/body/locations/:mainBodyLocationId', function (req, res, next) {
-    let uri =fixedUrl + '/' + req.params.mainBodyLocationId + '?token=' + process.env.doctorToken + '&' + constantFile.languageConst;
+    let uri =fixedUrl + '/' + req.params.mainBodyLocationId + '?token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
     request(uri, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             let resObj = new resFormat(JSON.parse(response.body))
