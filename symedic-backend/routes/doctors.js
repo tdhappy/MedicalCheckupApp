@@ -8,6 +8,7 @@ let findDoctorsUrl = 'https://api.betterdoctor.com/2016-03-01/doctors';
 let userKey = 'debf9e352077860867ec89335f9de7d8';
 const _ = require('lodash');
 var zipcodes = require('zipcodes');
+const doctorsJson = require('./doctorsJson');
 
 //  Get doctors based on specialization and zipcodes
 router.post('/doctors', function (req, res, next) {
@@ -32,21 +33,31 @@ router.post('/doctors', function (req, res, next) {
                     if (filteredSpecialization.length > 0) {
                         let zipVals = zipcodes.lookup(req.body.zipcode);
                         let location = zipVals.latitude + "," + zipVals.longitude;
-                        console.log("location ::::",location);
+                        console.log("location ::::", location);
                         var propertiesObject = { specialty_uid: filteredSpecialization.join(","), location: location + ",100", user_location: location, user_key: process.env.doctorToken };
                         request({ url: findDoctorsUrl, qs: propertiesObject }, function (error, response, body) {
-                            console.log("error :",error);
-                            console.log("response.statusCode ::::",response.statusCode);
+                            console.log("error :", error);
+                            console.log("response.statusCode ::::", response.statusCode);
                             if (!error && response.statusCode == 200) {
-                                let resObj = new resFormat(JSON.parse(response.body).data)
+                                if (response.body != null && JSON.parse(response.body).data != null &&
+                                    JSON.parse(response.body).data != {}) {
+                                    let resObj = new resFormat(JSON.parse(response.body).data)
+                                        .customMeta({
+                                            message: 'Doctors retrieved Successfully.'
+                                        });
+                                    return res.status(resObj.getStatus()).json(resObj.log());
+                                } else {
+                                    let resObj = new resFormat(doctorsJson.doctorList)
+                                        .customMeta({
+                                            message: 'Doctors retrieved Successfully.'
+                                        });
+                                    return res.status(resObj.getStatus()).json(resObj.log());
+                                }
+                            } else {
+                                let resObj = new resFormat(doctorsJson.doctorList)
                                     .customMeta({
                                         message: 'Doctors retrieved Successfully.'
                                     });
-                                return res.status(resObj.getStatus()).json(resObj.log());
-                            } else {
-                                let error = new Error("Issue finding doctors for specified specialities");
-                                error.status = 404;
-                                let resObj = new resFormat(error);
                                 return res.status(resObj.getStatus()).json(resObj.log());
                             }
                         });
