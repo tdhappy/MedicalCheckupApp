@@ -24,6 +24,12 @@ app.use(methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('port', process.env.PORT || 3001);
 
+var corsOptions = {
+    origin: 'http://localhost:8100',
+    credentials: true,
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions))
 app.use(require('./routes/symptoms'));
 app.use(require('./routes/bodylocation'));
 app.use(require('./routes/diagnosis'));
