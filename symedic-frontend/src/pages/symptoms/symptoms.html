@@ -14,10 +14,11 @@
 
 
 <ion-content padding>
-  <ion-list inset>
-    <button class = "sym" ion-item  *ngFor="let j of symptoms" (click)="setDone();getInput(j.ID)">
-      {{j.Name}}
-    </button>
+  <ion-list>
+    <ion-item *ngFor="let j of symptoms; let index = index">
+      <ion-label class = "sym">{{j.Name}}</ion-label>
+      <ion-checkbox  color="icon-color" (ionChange)="setDone();setState(index)" ></ion-checkbox>
+    </ion-item>
   </ion-list>
 
   <ion-fab right bottom *ngIf="done">

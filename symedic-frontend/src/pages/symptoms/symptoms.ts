@@ -19,7 +19,9 @@ import {CheckupInputProvider} from "../../providers/checkup-input/checkup-input"
 export class SymptomsPage {
   public done = false;
   public symptoms =[];
+  public state = [];
   constructor(private input:CheckupInputProvider,private symptomsprovider:SymptomsProvider,public navCtrl: NavController, public navParams: NavParams) {
+    this.input.symptoms = [];
   }
 
   ionViewDidLoad() {
@@ -27,8 +29,9 @@ export class SymptomsPage {
       .toPromise()
       .then(data => {
         this.symptoms = data["data"];
+        this.state.length = this.symptoms.length;
       });
-    this.input.reset();
+
   }
 
   public setDone(){
@@ -36,12 +39,22 @@ export class SymptomsPage {
   }
 
   goToResultsPage(){
+    for(let i=0; i< this.state.length;i++){
+      if(!!this.state[i]){
+        this.input.addSymptoms(this.symptoms[i].ID);
+      }
+    }
+    console.log(this.input.getSymptoms());
     this.navCtrl.push(ResultsPage);
 
   }
 
   getInput(symptom){
     this.input.addSymptoms(symptom);
+    console.log(this.input.getSymptoms());
   }
 
+  setState(i){
+    this.state[i] = !!!this.state[i] ;
+  }
 }
