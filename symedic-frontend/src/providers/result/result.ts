@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {CheckupInputProvider} from "../checkup-input/checkup-input";
+import {appSettings} from "../../settings";
 
 /*
   Generated class for the ResultProvider provider.
@@ -17,7 +18,7 @@ export class ResultProvider {
 
   public getResults()
   {
-    let apiurl = "http://localhost:3001/diagnosis";
+    let apiurl = appSettings.url + "/diagnosis";
 
     let gender = this.input.getGender();
     if(gender == "woman"){

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {CheckupInputProvider} from "../checkup-input/checkup-input";
+import {appSettings} from "../../settings";
 
 /*
   Generated class for the SymptomsProvider provider.
@@ -17,7 +18,7 @@ export class SymptomsProvider {
 
   getSymptoms()
   {
-    let apiurl = "http://localhost:3001/symptoms";
+    let apiurl = appSettings.url + "/symptoms";
 
     return this.http.post(apiurl,
       {

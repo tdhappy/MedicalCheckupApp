@@ -2,7 +2,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {CheckupInputProvider} from "../checkup-input/checkup-input";
 import 'rxjs/add/operator/map';
-
+import {appSettings} from '../../settings';
 /*
   Generated class for the SubbodypartsProvider provider.
 
@@ -18,7 +18,7 @@ export class SubbodypartsProvider {
   }
 
   getSubBodyParts(){
-    let apiurl = "http://localhost:3001/body/locations/" + this.input.getBodyPart();
+    let apiurl = appSettings.url + "/body/locations/" + this.input.getBodyPart();
     return this.http.get(apiurl);
   }
 }

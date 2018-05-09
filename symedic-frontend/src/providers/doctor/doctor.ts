@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {CheckupInputProvider} from "../checkup-input/checkup-input";
+import {appSettings} from "../../settings";
 
 /*
   Generated class for the DoctorProvider provider.
@@ -17,7 +18,7 @@ export class DoctorProvider {
 
   public getDoctors()
   {
-    let apiurl = "http://localhost:3001/doctors";
+    let apiurl = appSettings.url + "/doctors";
 
     return this.http.post(apiurl,
       {
