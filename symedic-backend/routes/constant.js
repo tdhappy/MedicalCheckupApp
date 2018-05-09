@@ -4,7 +4,7 @@ let token = (process.env.apiMedicToken || 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
 var languageConst = 'language=en-gb&format=json';
 
 var betterdoctorUrl = 'https://api.betterdoctor.com/2016-03-01';
-var betterdoctorUserKey =  (process.env.doctorToken || 'debf9e352077860867ec89335f9de7d8');^M
+var betterdoctorUserKey =  (process.env.doctorToken || 'debf9e352077860867ec89335f9de7d8');
 
 
 module.exports.apimedicUrl = apimedicUrl;
