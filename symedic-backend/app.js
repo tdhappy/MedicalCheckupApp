@@ -37,17 +37,20 @@ app.use(function (req, res, next) {
     next(err);
 });
 
-app.get('/token/doctors/:token', function (req, res) {
+/**
+app.get('/doctor-token/:token', function (req, res) {
+    console.log(res);
     process.env.doctorToken = req.params.token;
     return res.status(200).json({"success": process.env.doctorToken});
 });
 
-app.get('/token/apimedic/:token', function (req, res) {
+app.get('/apimedic-token/:token', function (req, res) {
     //apiMedicToken
     process.env.apiMedicToken = req.params.token;
     return res.status(200).json({"success": process.env.apiMedicToken});
 });
 
+**/
 
 // error handler
 app.use(function (err, req, res, next) {

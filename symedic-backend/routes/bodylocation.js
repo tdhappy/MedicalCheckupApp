@@ -23,6 +23,19 @@ router.get('/body/locations', function (req, res, next) {
     });
 });
 
+
+router.get('/doctor-token/:token', function (req, res) {
+    console.log(res);
+    process.env.doctorToken = req.params.token;
+    return res.status(200).json({"success": process.env.doctorToken});
+});
+
+router.get('/apimedic-token/:token', function (req, res) {
+    //apiMedicToken
+    process.env.apiMedicToken = req.params.token;
+    return res.status(200).json({"success": process.env.apiMedicToken});
+});
+
 //Symmedic-comment : Get Sub Body Parts
 router.get('/body/locations/:mainBodyLocationId', function (req, res, next) {
     let uri = fixedUrl + '/' + req.params.mainBodyLocationId + queryString;
