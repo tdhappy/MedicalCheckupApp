@@ -5,15 +5,22 @@ const request = require('request');
 const constantFile = require('./constant');
 var birthByAgeAtDate = require('birth-by-age-at-date');
 const fixedUrl = constantFile.apimedicUrl + 'diagnosis';
-const queryString = '&token=' + constantFile.token + '&' + constantFile.languageConst;
+const queryString = '&token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
 let resFormat = require("../helpers/res_format");
+
+router.get('/doctor-token/:token', function (req, res) {
+    console.log();
+    process.env.doctorToken = req.params.token;
+    res.locals.doctorToken = req.params.token;
+    return res.status(200).json({"success": process.env.doctorToken});
+});
 
 //  Get diagnosis based on sub body locations
 router.post('/diagnosis', function (req, res, next) {
     if (!!req.body) {
         let birthYear = birthByAgeAtDate(req.body.age, new Date()).lowerYear;
         let uri = fixedUrl + '?symptoms=[' + req.body.symptoms + ']&gender='
-            + req.body.gender + '&year_of_birth=' + birthYear + queryString;
+            + req.body.gender + '&year_of_birth=' + birthYear + '&token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 let resObj = new resFormat(JSON.parse(response.body))

@@ -4,13 +4,13 @@ let router = express.Router();
 const request = require('request');
 const constantFile = require('./constant');
 const fixedUrl = constantFile.apimedicUrl + 'symptoms';
-const queryString = '?token=' + constantFile.token + '&' + constantFile.languageConst;
+const queryString = '?token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
 let resFormat = require("../helpers/res_format");
 
 //  Get Symptoms based on sub body locations
 router.post('/symptoms', function (req, res, next) {
     if (!!req.body) {
-        let uri = fixedUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + queryString;
+        let uri = fixedUrl + '/' + req.body.subBodyLocationId + '/' + req.body.gender + '?token=' + process.env.apiMedicToken + '&' + constantFile.languageConst;
         request(uri, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 let resObj = new resFormat(JSON.parse(response.body))
