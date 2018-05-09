@@ -37,20 +37,21 @@ app.use(function (req, res, next) {
     next(err);
 });
 
-/**
-app.get('/doctor-token/:token', function (req, res) {
+/* express.Router().get('/doctor-token/:token', function (req, res) {
     console.log(res);
     process.env.doctorToken = req.params.token;
+   res.locals.doctorToken = req.params.token;
     return res.status(200).json({"success": process.env.doctorToken});
 });
 
-app.get('/apimedic-token/:token', function (req, res) {
+express.Router().get('/apimedic-token/:token', function (req, res) {
     //apiMedicToken
     process.env.apiMedicToken = req.params.token;
+res.locals.apiMedicToken = req.params.token;
     return res.status(200).json({"success": process.env.apiMedicToken});
 });
+*/
 
-**/
 
 // error handler
 app.use(function (err, req, res, next) {
