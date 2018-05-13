@@ -27,7 +27,7 @@ This will help with disease management.
 <tbody>
 	<tr>
 		<td>Front-End</td>
-		<td>IOS Application using Xcode</td>
+		<td>IOS Application using Ionic and Angular 4</td>
 	</tr>
 	<tr>
 		<td>Back-End</td>
@@ -72,5 +72,5 @@ Build stronger engagement and trust between clientss and health service by adopt
 
 Make the solution simple and easy to use
 
-![Alt text]Desktop/Sketchingtheapp.png?raw=true "Design Thinking")
+![Alt text](Desktop/Sketchingtheapp.png?raw=true "Design Thinking")
 
