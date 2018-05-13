@@ -62,15 +62,3 @@ This will help with disease management.
 </tbody>
 </table>
 
-## Design Objective
-
-Create a solution to reduce the hassle of unnecessary visits to doctors and hospital
-
-Modernize Telehealth service by looking into potential ways to improve the service 
-
-Build stronger engagement and trust between clientss and health service by adopting a user centric approach
-
-Make the solution simple and easy to use
-
-![Alt text](Desktop/Sketchingtheapp.png?raw=true "Design Thinking")
-
