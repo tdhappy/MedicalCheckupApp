@@ -12,14 +12,21 @@
 **Problem**
 - People are frustrated with lack of accessing family doctor at the time of need
 - Long wait times (sometimes months) of the non urgent cases
-- Most of the people admit to self diagnosing themselves by going to Dr.Google
+- Most of the people admit to self diagnosing themselves through Google
 - New parents take the help of social media to avoid unnecessary doctor visits
 
+**Design Objective**
+- Create a solution to reduce the hassle of unnecessary visits to doctors and hospital
+- Modernize Telehealth service by looking into potential ways to improve the service 
+- To deliver a service that is user centric and meets citizens expectations
+- Make the solution simple and easy to use
+
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign1.jpg)
+
  **SymMedic**
-- Quickly look at your symptoms to know if your condition is treatable at home or require doctor visit
+- Quickly look at your symptoms to know if your condition is treatable at home or requires a doctor visit
 - Find a doctor near you with few clicks
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign1.JPG)
 
 **How it works?**
 - With just few clicks you can know what you might be suffering from
@@ -30,11 +37,11 @@
 ![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign2.jpg)
 
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign3.jpg)
-
 **Results**
 - Find the most probable diseases you might be suffering from along with the type of doctor you need to consult
 - Find the doctor nearest to you by entering your zip code
+
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign3.jpg)
 
 ![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign4.jpg)
 
