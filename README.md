@@ -19,7 +19,7 @@
 - Quickly look at your symptoms to know if your condition is treatable at home or require doctor visit
 - Find a doctor near you with few clicks
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/tree/master/Images/AppDesign1.png)
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/AppDesign.JPG)
 
 **How it works?**
 - With just few clicks you can know what you might be suffering from
