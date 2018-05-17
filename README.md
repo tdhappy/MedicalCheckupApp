@@ -19,7 +19,7 @@
 - Quickly look at your symptoms to know if your condition is treatable at home or require doctor visit
 - Find a doctor near you with few clicks
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/AppDesign.JPG)
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign1.JPG)
 
 **How it works?**
 - With just few clicks you can know what you might be suffering from
@@ -27,17 +27,20 @@
 - Search Doctors at a location and of a particular Specialization
 
 **SymMedic IOS App**
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign2.jpg)
+
+
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign3.jpg)
 
 **Results**
 - Find the most probable diseases you might be suffering from along with the type of doctor you need to consult
 - Find the doctor nearest to you by entering your zip code
 
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign4.jpg)
+
 **Technology Stack**
 
-
-
-
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/AppDesign.JPG)
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign5.jpg)
 
 ### Technology Stack 
 
