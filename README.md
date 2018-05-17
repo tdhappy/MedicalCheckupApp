@@ -7,12 +7,22 @@
 3)	Tarang Dhulkotia
 4)	LakshmiPrasanna Kona
 
-**Title:** *Disease Detection*
+**Title:** SymMedic
 
-**Description:** This application is based on a crowd-sourced model. The application captures users symptoms through a user-friendly questionnaire on a website and provides information about the most probable diseases they might be suffering from. The application would also provide a recommendation of doctors that are best suited to treat the disease based on user's location. The application will take the generated data from users to create a trend analysis of diseases.
-This will help with disease management.
+**Problem**
+- People are frustrated with lack of accessing family doctor at the time of need
+- Long wait times (sometimes months) of the non urgent cases
+- Most of the people admit to self diagnosing themselves by going to Dr.Google
+- New parents take the help of social media to avoid unnecessary doctor visits
 
-**Proposed Methodology:**  The application will be a website that consumes a third-party API (http://apimedic.com/). User's input will be passed to the API and the response (which will be the disease name) will be represented. Also, the application will detect user's location and using another API (https://developer.betterdoctor.com/) it will list all the nearby doctors that can treat the disease. It will also plot the disease data on google map. 
+ **SymMedic**
+- Quickly look at your symptoms to know if your condition is treatable at home or require doctor visit
+- Find a doctor near you with few clicks
+
+
+### Application Design  
+
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/AppDesign.JPG)
 
 ### Technology Stack 
 
@@ -62,6 +72,4 @@ This will help with disease management.
 </tbody>
 </table>
 
-### Application Design  
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/AppDesign.JPG)
