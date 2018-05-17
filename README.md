@@ -9,6 +9,10 @@
 
 **Title:** SymMedic
 
+**Description** 
+
+This application is based on a crowd-sourced model. The application captures users symptoms through a user-friendly questionnaire on a website and provides information about the most probable diseases they might be suffering from. The application would also provide a recommendation of doctors that are best suited to treat the disease based on user's location. The application will take the generated data from users to create a trend analysis of diseases.
+
 **Problem**
 
 - People are frustrated with lack of accessing family doctor at the time of need
