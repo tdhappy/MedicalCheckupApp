@@ -48,7 +48,7 @@
 
 ![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign3.jpg)
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign4.jpg)
+![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesignloc.jpg)
 
 **Technology Stack**
 
