@@ -27,7 +27,6 @@ This application is based on a crowd-sourced model. The application captures use
 - To deliver a service that is user centric and meets citizens expectations
 - Make the solution simple and easy to use
 
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign1.jpg)
 
  **SymMedic**
  
@@ -40,19 +39,11 @@ This application is based on a crowd-sourced model. The application captures use
 - Enter your symptoms and the application will give the possible conditions with 90% accuracy
 - Search Doctors at a location and of a particular Specialization
 
-**SymMedic IOS App**
-
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign2.jpg)
-
 
 **Results**
 
 - Find the most probable diseases you might be suffering from along with the type of doctor you need to consult
 - Find the doctor nearest to you by entering your zip code
-
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesign3.jpg)
-
-![](https://github.com/SJSU272LabSP18/MedicalCheckupApp/blob/master/Images/AppDesignloc.jpg)
 
 **Technology Stack**
 
