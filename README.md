@@ -2,9 +2,9 @@
 **Team Name:** MegaHertz
 
 **Team Members:**
-1)	Shraddha Chadha
+1)	Tarang Dhulkotia
 2)	Shreya Shah
-3)	Tarang Dhulkotia
+3)	Shraddha Chadha
 4)	LakshmiPrasanna Kona
 
 **Title:** SymMedic
